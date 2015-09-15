@@ -8,10 +8,10 @@ random.seed()
 trialversion = random.randint(1,3) # pick one of three...
 name = random.choice(['Tom', 'Sue', 'Rob', 'Rebecca', 'William', 'Emma'])
 year = random.randint(1970, 2014)
-if trialversion == halloweentrial:
+if trialversion == 1:
   date = 31
   month = 'October'
-elif halloweentrial == 2:
+elif trialversion == 2:
   date = datetime.today().day
   month = month_name[datetime.today().month]
 else:
