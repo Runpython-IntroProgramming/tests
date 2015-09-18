@@ -27,6 +27,7 @@ def testexemplar(filename, directory):
   stimulus from the ```getstimulus``` function and comparing output with
   execution of python module ```<directory>/exemplars/<filename>```.
   """
+  newlinetospace = lambda s: re.sub("[\r\n]+", " ", s)
   singlespace = lambda s: re.sub("[ \t]+", " ", s)
   stimulus = getstimulus(filename, directory)
   try:
@@ -49,7 +50,7 @@ def testexemplar(filename, directory):
       if canproc.returncode == 0:
         diffout = "Test case output does not match exemplar:\n"+''.join(difflib.unified_diff(canout.splitlines(), testout.splitlines(), 
           fromfile="exemplar", tofile="test case"))
-        assert singlespace(canout) == singlespace(testout), diffout 
+        assert singlespace(newlinetospace(canout)) == singlespace(newlinetospace(testout)), diffout 
       else:
         raise RuntimeError(canout) 
   except subprocess.TimeoutExpired:
