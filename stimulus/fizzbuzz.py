@@ -1,5 +1,7 @@
 import fractions
-from random import randint
+from random import randint, seed
+
+seed()
 
 terms = randint(60,80)
 fizzbuzz = lambda x=15 : randint(3,x)
