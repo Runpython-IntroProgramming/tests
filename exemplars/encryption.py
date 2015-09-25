@@ -1,4 +1,4 @@
-associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!" * 2
+associations = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'"+chr(34)+"/"+chr(92)+"<>(){}[]-=_+?!") * 2
 encode = lambda s: [associations.find(c) for c in s]   # convert string to digits
 decode = lambda l: ''.join([associations[n] for n in l]) # digits to chars to string
 keygen = lambda s, p: p*(len(s)//len(p)) + p[:len(s)%len(p)]    # generate a key of length = message
