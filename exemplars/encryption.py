@@ -15,8 +15,8 @@ while True:
         msg = input("Message: ")
         key = input("Key: ") 
         if action == 'e':
-            print (decode(encrypt(encode(msg),encode(keygen(msg,key)))) + '\\n')
+            print (decode(encrypt(encode(msg),encode(keygen(msg,key)))))
         else:
-            print (decode(decrypt(encode(msg),encode(keygen(msg,key)))) + '\\n')
+            print (decode(decrypt(encode(msg),encode(keygen(msg,key)))))
     else:
-        print ("Did not understand command, try again.\\n")
+        print ("Did not understand command, try again.")
