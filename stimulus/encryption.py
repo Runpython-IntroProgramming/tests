@@ -28,16 +28,18 @@ samplekeys = ["password",
   "baseball"]
 
 unrecognizedi = random.randint(0,5)
-s = ''
 for i in range(0,6):
     if i == unrecognizedi:
-        s += random.choice('lmnoprs') + '\n'
+        print(random.choice('lmnoprs'))
     else:
         t = random.choice(samplestrings)
         p = random.choice(samplekeys)
         e = decode(encrypt(encode(t),encode(keygen(t,p))))
-        s += 'e\n' + t + '\n' + p + '\nd\n' + e + '\n' + p + '\n'
-s += 'q\n'
-
-print(s)
+        print("e")
+        print(t)
+        print(p)
+        print("d")
+        print(e)
+        print(p)
+print("q")
 
