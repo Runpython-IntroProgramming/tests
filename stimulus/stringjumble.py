@@ -1,5 +1,5 @@
 import random
-
+random.seed()
 samplestrings = ["How now? A rat? Dead, for a ducat, dead!",
   "Done to death by slanderous tongue",
   "Why then tonight let us assay our plot",
