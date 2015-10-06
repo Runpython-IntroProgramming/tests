@@ -10,4 +10,4 @@ samplestrings = ["How now? A rat? Dead, for a ducat, dead!",
   "Our remedies oft in ourselves do lie",
   "I go, and it is done; the bell invites me"]
 
-print(random.choice(self.samplestrings))
+print(random.choice(samplestrings))
