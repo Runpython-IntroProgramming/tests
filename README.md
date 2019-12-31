@@ -1,3 +1,3 @@
 # Tests
-Automated tests for assignments
+Automated tests for coding challenges
 
